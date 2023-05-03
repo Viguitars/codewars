@@ -1,8 +1,11 @@
-/* Write a generic function chainer that takes a starting value, and an array of functions to 
-execute on it (array of symbols for Ruby).
+/* cSpell: disable */
 
-The input for each function is the output of the previous function (except the first function, 
-which takes the starting value as its input). Return the final value after execution is complete.
+/* Write a generic function chainer that takes a starting value, and an array of functions 
+to execute on it (array of symbols for Ruby).
+
+The input for each function is the output of the previous function (except the first 
+function, which takes the starting value as its input). Return the final value after 
+execution is complete. */
 
 function add(num) {
   return num + 1;
@@ -13,8 +16,15 @@ function mult(num) {
 }
 
 chain(2, [add, mult]);
-// returns 90; */
+// returns 90;
 
 function chain(input, fs) {
-	// implement the "chain" function
+  let output = input;
+
+  for (let func of fs) {
+    output = func(output);
+  }
+
+  return output;
 }
+console.log(chain(2, [add, mult]));

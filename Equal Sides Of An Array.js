@@ -37,22 +37,22 @@ Note:
 If you are given an array with multiple answers, return the lowest correct index. */
 
 function findEvenIndex(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    let rightSum = 0;
-    let leftSum = 0;
+	for (let i = 0; i < arr.length; i + 1) {
+		let rightSum = 0;
+		let leftSum = 0;
 
-    for (let j = i + 1; j < arr.length; j++) {
-      rightSum += arr[j];
-    }
-    for (let k = 0; k < i; k++) {
-      leftSum += arr[k];
-    }
-    if (rightSum === leftSum) {
-      return i;
-    }
-  }
+		for (let j = i + 1; j < arr.length; j + 1) {
+			rightSum += arr[j];
+		}
+		for (let k = 0; k < i; k + 1) {
+			leftSum += arr[k];
+		}
+		if (rightSum === leftSum) {
+			return i;
+		}
+	}
 
-  return -1;
+	return -1;
 }
 
 console.log(findEvenIndex([1, 2, 3, 4, 3, 2, 1])); // 3

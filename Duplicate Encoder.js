@@ -14,19 +14,20 @@ Assertion messages may be unclear about what they display in some languages. If 
 "...It Should encode XXX", the "XXX" is the expected result, not the input! */
 
 function duplicateEncode(word) {
-  const wordToLowerCase = word.toLowerCase();
-  const letterCounts = {};
+	const wordToLowerCase = word.toLowerCase();
+	const letterCounts = {};
 
-  for (let letter of wordToLowerCase) {
-    letterCounts[letter] = (letterCounts[letter] || 0) + 1;
-  }
-  return wordToLowerCase
-    .split("")
-    .map((letter) => (letterCounts[letter] > 1 ? ")" : "("))
-    .join("");
+	wordToLowerCase.split('').forEach(letter => {
+		letterCounts[letter] = (letterCounts[letter] || 0) + 1;
+	});
+
+	return wordToLowerCase
+		.split('')
+		.map(letter => (letterCounts[letter] === 1 ? '(' : ')'))
+		.join('');
 }
 
-console.log(duplicateEncode("din")); // '((('
-console.log(duplicateEncode("recede")); // '()()()'
-console.log(duplicateEncode("Success")); // ')())())'
-console.log(duplicateEncode("(( @")); // '))(('
+console.log(duplicateEncode('din')); // '((('
+console.log(duplicateEncode('recede')); // '()()()'
+console.log(duplicateEncode('Success')); // ')())())'
+console.log(duplicateEncode('(( @')); // '))(('

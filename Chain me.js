@@ -1,3 +1,4 @@
+/* cSpell:disable */
 /* Write a generic function chainer that takes a starting value, and an array of functions to execute on it (array of symbols for Ruby).
 
 The input for each function is the output of the previous function (except the 

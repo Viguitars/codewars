@@ -20,7 +20,7 @@ input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
 output = ["Open", "Open", "Senior", "Open", "Open", "Senior"] */
 
 function openOrSenior(data) {
-	return data.map(item => {
+	return data.map((item) => {
 		if (Array.isArray(data) && item.length === 2) {
 			return item[0] >= 55 && item[1] > 7 ? 'Senior' : 'Open';
 		}

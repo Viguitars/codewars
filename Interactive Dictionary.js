@@ -1,6 +1,6 @@
 /* cSpell:disable */
-/* In this kata, your job is to create a class Dictionary which you can add words to and their 
-entries. Example:
+/* In this kata, your job is to create a class Dictionary which you can add 
+words to and their entries. Example:
 
 const d = new Dictionary();
 

@@ -21,13 +21,13 @@ function duplicateEncode(word) {
 	const wordToLowerCase = word.toLowerCase();
 	const letterCounts = {};
 
-	wordToLowerCase.split('').forEach(letter => {
+	wordToLowerCase.split('').forEach((letter) => {
 		letterCounts[letter] = (letterCounts[letter] || 0) + 1;
 	});
 
 	return wordToLowerCase
 		.split('')
-		.map(letter => (letterCounts[letter] === 1 ? '(' : ')'))
+		.map((letter) => (letterCounts[letter] === 1 ? '(' : ')'))
 		.join('');
 }
 

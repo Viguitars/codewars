@@ -25,7 +25,7 @@ function rgb(r, g, b) {
 		const aux2 = value % 16;
 		convertedHex.push(aux1, aux2);
 	}
-	return convertedHex.map(item => HEX_DIGITS[item]).join('');
+	return convertedHex.map((item) => HEX_DIGITS[item]).join('');
 }
 
 console.log(rgb(0, 0, 0)); // 000000

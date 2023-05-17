@@ -34,7 +34,8 @@ integer positive or negative.
 
 Output:
 The lowest index N where the side to the left of N is equal to the side to the 
-right of N. If you do not find an index that fits these rules, then you will return -1.
+right of N. If you do not find an index that fits these rules, then you will 
+return -1.
 
 Note:
 If you are given an array with multiple answers, return the lowest correct 

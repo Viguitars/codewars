@@ -15,20 +15,17 @@ zeros(12) = 2
 Hint: You're not meant to calculate the factorial. Find another way to find the number of zeros. */
 
 function zeros(n) {
-  const kMax = function (n) {
-    return Math.round(Math.log(n) / Math.log(5));
-  };
-  console.log(kMax(n));
-  let summation = 0;
-
-  for (let kMin = 1; kMin <= kMax; kMin++) {
-    summation += n / Math.pow(5, kMin);
-    console.log(summation);
+  const upperLimit = Math.floor(Math.log(n) / Math.log(5));
+  let zerosCount = 0;
+  for (let lowerLimit = 1; lowerLimit <= upperLimit; lowerLimit++) {
+    zerosCount += Math.floor(n / Math.pow(5, lowerLimit));
   }
-  return summation;
+  return zerosCount;
 }
 
-//console.log(zeros(0)); // 0
-//console.log(zeros(5)); // 1
-//console.log(zeros(6)); // 1
+console.log(zeros(0)); // 0
+console.log(zeros(5)); // 1
+console.log(zeros(6)); // 1
 console.log(zeros(30)); // 7
+console.log(zeros(20)); // 4
+console.log(zeros(333044047)); // 83261005

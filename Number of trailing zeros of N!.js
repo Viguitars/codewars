@@ -1,4 +1,5 @@
-/* Write a program that will calculate the number of trailing zeros in a factorial of a given number.
+/* Write a program that will calculate the number of trailing zeros in a factorial of a given 
+number.
 
 N! = 1 * 2 * 3 *  ... * N
 
@@ -12,7 +13,8 @@ zeros(6) = 1
 
 zeros(12) = 2
 # 12! = 479001600 --> 2 trailing zeros
-Hint: You're not meant to calculate the factorial. Find another way to find the number of zeros. */
+Hint: You're not meant to calculate the factorial. Find another way to find the number of zeros. 
+*/
 
 function zeros(n) {
   const upperLimit = Math.floor(Math.log(n) / Math.log(5));

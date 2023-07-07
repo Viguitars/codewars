@@ -120,7 +120,7 @@ function rot13(message) {
 
 	return message
 		.split('')
-		.map(item => rot13Alphabet[alphabet.indexOf(item)] || item)
+		.map((item) => rot13Alphabet[alphabet.indexOf(item)] || item)
 		.join('');
 }
 

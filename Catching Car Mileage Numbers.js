@@ -60,7 +60,7 @@ The awesomePhrases array will always be provided, and will always be an array,
 but may be empty. (Not everyone thinks numbers spell funny words...)
 You should only ever output 0, 1, or 2. */
 
-function isInteresting(number, awesomePhrases) {
+/* function isInteresting(number, awesomePhrases) {
   const regex = /\d0$/;
   [num1, num2] = awesomePhrases;
 
@@ -77,4 +77,4 @@ console.log(isInteresting(1336, [1337, 256])); // 1
 console.log(isInteresting(1337, [1337, 256])); // 2
 console.log(isInteresting(11208, [1337, 256])); // 0
 console.log(isInteresting(11209, [1337, 256])); // 1
-console.log(isInteresting(11211, [1337, 256])); // 2
+console.log(isInteresting(11211, [1337, 256])); // 2 */

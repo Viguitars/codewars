@@ -13,9 +13,9 @@ Examples
 
 Notes
 
-Assertion messages may be unclear about what they display in some languages. If 
-you read "...It Should encode XXX", the "XXX" is the expected result, not the 
-input! */
+Assertion messages may be unclear about what they display in some languages. 
+If you read "...It Should encode XXX", the "XXX" is the expected result, not 
+the input! */
 
 function duplicateEncode(word) {
 	const wordToLowerCase = word.toLowerCase();
